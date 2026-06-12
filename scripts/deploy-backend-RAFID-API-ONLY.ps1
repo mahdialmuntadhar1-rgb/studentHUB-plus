@@ -2,7 +2,8 @@
 # This deploys only rafid-api backend.
 # It does NOT touch frontend.
 
-$BackendDir = "C:\Users\HB LAPTOP STORE\Documents\Codex\2026-06-10\files-mentioned-by-the-user-pasted\work\studentHUB-plus\backend"
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+$BackendDir = Join-Path $RepoRoot "backend"
 Set-Location $BackendDir
 
 npx tsc --noEmit

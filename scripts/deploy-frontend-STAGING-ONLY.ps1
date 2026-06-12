@@ -1,9 +1,9 @@
 ﻿# SAFE STAGING DEPLOY
 # This updates only the staging/test frontend: https-github
-# It must NOT touch the production frontend: idiot
+# It must NOT touch production frontend: idiot
 
-$Root = "C:\Users\HB LAPTOP STORE\Documents\Codex\2026-06-10\files-mentioned-by-the-user-pasted\work\studentHUB-plus"
-Set-Location $Root
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+Set-Location $RepoRoot
 
 npm run build
 npx wrangler deploy --name https-github --assets ./dist --compatibility-date 2026-05-26 --compatibility-flag nodejs_compat

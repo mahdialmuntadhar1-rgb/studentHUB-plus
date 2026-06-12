@@ -1,12 +1,18 @@
 ﻿# PRODUCTION FRONTEND DEPLOY - DANGEROUS
-# Only run this after staging is checked visually.
+# Only run after staging has been checked visually.
 # This updates: https://idiot.mahdialmuntadhar1.workers.dev/
 
-$Root = "C:\Users\HB LAPTOP STORE\Documents\Codex\2026-06-10\files-mentioned-by-the-user-pasted\work\studentHUB-plus"
-Set-Location $Root
+$RepoRoot = Split-Path -Parent $PSScriptRoot
+Set-Location $RepoRoot
 
 Write-Host "WARNING: This will deploy to PRODUCTION frontend: idiot" -ForegroundColor Red
 Write-Host "Correct production URL: https://idiot.mahdialmuntadhar1.workers.dev/" -ForegroundColor Yellow
+Write-Host ""
+
+$branch = git branch --show-current
+Write-Host "Current branch: $branch" -ForegroundColor Cyan
+git status --short
+
 Write-Host ""
 $confirm = Read-Host "Type DEPLOY IDIOT to continue"
 
@@ -14,8 +20,6 @@ if ($confirm -ne "DEPLOY IDIOT") {
   Write-Host "Cancelled. Production frontend was not touched." -ForegroundColor Green
   exit 1
 }
-
-git status --short
 
 Write-Host ""
 $confirm2 = Read-Host "Type YES I CHECKED STAGING to deploy production"

@@ -19,8 +19,9 @@ Worker name: rafid-api
 
 RULES:
 1. Never run plain wrangler deploy from root.
-2. Never deploy current mixed local frontend directly to idiot.
-3. Test on https-github first.
-4. Deploy to idiot only with scripts\deploy-frontend-PRODUCTION-IDIOT-CONFIRM.ps1.
-5. Backend deploy uses scripts\deploy-backend-RAFID-API-ONLY.ps1.
-6. If idiot breaks, run scripts\ROLLBACK-IDIOT-TO-GOOD-VERSION.ps1.
+2. Never deploy old mixed folder to idiot.
+3. Use studentHUB-plus-clean for safe future work.
+4. Test on https-github first.
+5. Deploy to idiot only with scripts\deploy-frontend-PRODUCTION-IDIOT-CONFIRM.ps1.
+6. Backend deploy uses scripts\deploy-backend-RAFID-API-ONLY.ps1.
+7. If idiot breaks, run scripts\ROLLBACK-IDIOT-TO-GOOD-VERSION.ps1.
