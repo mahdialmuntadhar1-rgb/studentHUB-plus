@@ -14,6 +14,7 @@ interface PostCardProps {
   delay?: number;
   onComment?: (post: Post) => void;
   onImageClick?: (post: Post) => void;
+  key?: React.Key;
 }
 
 export default function PostCard({ post, delay = 0, onComment, onImageClick }: PostCardProps) {
